@@ -63,6 +63,7 @@ img {
 }
 .gallery {
   width: 1128px;
+  margin: 100px auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -122,7 +123,7 @@ img {
   letter-spacing: 0.04em;
   color: #2e2f42;
   width: 360px;
-  margin: 24px;
+  margin: 24px auto;
 }
 .form-label {
   display: flex;
@@ -154,7 +155,8 @@ img {
   cursor: pointer;
 }
 .form-btn:hover,
-.change-color:hover {
+.change-color:hover,
+.controls-button-create:hover {
   background: #6c8cff;
 }
 
@@ -184,4 +186,72 @@ img {
   border-radius: 8px;
   border: none;
   cursor: pointer;
+}
+
+#controls {
+  font-family: "Montserrat", sans-serif;
+  border-radius: 8px;
+  padding: 32px;
+  width: 486px;
+  margin: 24px auto;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f6f6fe;
+
+}
+.controls-input {
+  border: 1px solid #808080;
+  border-radius: 8px;
+  padding: 8px;
+  text-align: center;
+  width: 150px;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  outline: none;
+}
+.c-btn {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 120px;
+  border: none;
+  cursor: pointer;
+}
+.controls-button-create {
+  background: #4e75ff;
+  margin: 32px 16px;
+}
+.controls-button-destroy {
+  background: #ff4e4e;
+}
+.controls-button-destroy:hover {
+  background: #ff7070;
+}
+.boxes {
+  border-radius: 8px;
+  padding: 32px;
+  width: 486px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 44px;
+  margin: 24px auto;
+  margin-top: 0;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
 }
