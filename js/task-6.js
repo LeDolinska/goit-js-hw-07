@@ -6,20 +6,17 @@ function getRandomHexColor() {
 const boxes = document.querySelector("#boxes");
 
 function createBoxes(amount) {
-  boxes.innerHTML = "";
+  boxes.innerHTML = ""; 
   let boxSize = 30;
-  let count = 0;
-  while (count < amount) {
-    const box = document.createElement("div");
-    boxes.style.backgroundColor = "#f6f6fe";
-    box.style.width = `${boxSize}px`;
-    box.style.height = `${boxSize}px`;
-    box.style.backgroundColor = getRandomHexColor();
-    boxes.append(box);
-    count++;
+  let boxElements = ''; 
+  for (let count = 0; count < amount; count++) {
+    boxElements += `<div style="width: ${boxSize}px; height: ${boxSize}px; background-color: ${getRandomHexColor()};"></div>`;
     boxSize += 10;
   }
+  boxes.innerHTML = boxElements;
+  boxes.style.backgroundColor = "#f6f6fe";
 }
+  
 
 function destroyBoxes() {
   boxes.innerHTML = "";
